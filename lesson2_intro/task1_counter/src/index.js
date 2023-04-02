@@ -1,18 +1,22 @@
-import React from 'react';
+// import React from 'react';
 import { createStore } from 'redux';
-import ReactDOM from 'react-dom';
-import './index.scss';
-import App from './App.jsx';
-import { INCREMENT, DECREMENT, RESET } from './variables';
+// import ReactDOM from 'react-dom';
+// import './index.scss';
+// import App from './App.jsx';
+// import { INCREMENT, DECREMENT, RESET } from './variables';
 
-const incrementActionCreator = () => {
+export const INCREMENT = 'COUNTER/INCREMENT';
+export const DECREMENT = 'COUNTER/DECREMENT';
+export const RESET = 'COUNTER/RESET';
+
+const increment = () => {
   return { type: INCREMENT };
 };
 
-const decrementActionCreator = () => {
+const decrement = () => {
   return { type: DECREMENT };
 };
-const resetActionCreator = () => {
+const reset = () => {
   return { type: RESET };
 };
 // const initialState = {
@@ -32,6 +36,6 @@ const counterReducer = (state = 0, action) => {
 
 const store = createStore(counterReducer);
 
-const rootElement = document.querySelector('#root');
+// const rootElement = document.querySelector('#root');
 
-ReactDOM.render(<App />, rootElement);
+// ReactDOM.render(<App />, rootElement);
