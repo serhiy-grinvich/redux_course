@@ -5,20 +5,20 @@ import { createStore } from 'redux';
 // import App from './App.jsx';
 // import { INCREMENT, DECREMENT, RESET } from './variables';
 
-export const INCREMENT = 'COUNTER/INCREMENT';
-export const DECREMENT = 'COUNTER/DECREMENT';
-export const RESET = 'COUNTER/RESET';
+const INCREMENT = 'COUNTER/INCREMENT';
+const DECREMENT = 'COUNTER/DECREMENT';
+const RESET = 'COUNTER/RESET';
 
-const increment = () => {
-  return { type: INCREMENT };
+export const increment = () => {
+  return { type: 'COUNTER/INCREMENT' };
 };
 
-const decrement = () => {
-  return { type: DECREMENT };
+export const decrement = () => {
+  return { type: 'COUNTER/DECREMENT' };
 };
-const reset = () => {
-  return { type: RESET };
-};
+// const reset = () => {
+//   return { type: 'COUNTER/RESET' };
+// };
 // const initialState = {
 //   history: [],
 // };
@@ -34,7 +34,7 @@ const counterReducer = (state = 0, action) => {
   }
 };
 
-const store = createStore(counterReducer);
+export const store = createStore(counterReducer);
 
 // const rootElement = document.querySelector('#root');
 
